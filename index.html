@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Delicias Gourmet</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background-color: #ff6347;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            animation: slideDown 1s ease-out;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffdfba;
+        }
+
+        /* Sección del menú */
+        section#menu {
+            padding: 50px;
+            background-color: #fff;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        section#menu h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+        }
+
+        .menu-category {
+            margin-bottom: 50px;
+        }
+
+        .menu-category h3 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .menu-item {
+            display: inline-block;
+            width: 300px;
+            margin: 15px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #ffdfba;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .menu-item:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .menu-item h4 {
+            margin: 0;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .menu-item p {
+            font-size: 1em;
+            color: #555;
+        }
+
+        /* Sección de reseñas */
+        section#reviews {
+            background-color: #f0f0f0;
+            padding: 50px;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        section#reviews h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .review-form {
+            text-align: center;
+            margin: 0 auto;
+            width: 60%;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .review-form input, .review-form textarea {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .review-form button {
+            padding: 10px 20px;
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .review-form button:hover {
+            background-color: #ff4500;
+        }
+
+        /* Animaciones */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <h1>Restaurante El gloton enmascarado</h1>
+        <nav>
+            <ul>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="#reviews">Reseñas</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de Menú -->
+    <section id="menu">
+        <h2>Nuestro Menú</h2>
+        <div class="menu-category">
+            <h3>Entradas</h3>
+            <div class="menu-item">
+                <h4>Hambuguesa</h4>
+                <p>Ensalada fresca con aderezo casero.</p>
+            </div>
+            <div class="menu-item">
+                <h4>Hot dog</h4>
+                <p>Tostadas con tomate y albahaca.</p>
+            </div>
+            <div class="menu-item">
+                <h4>Lonche de pierna</h4>
+                <p>$60</p>
+            </div>
+            <div class="menu-item">
+                <h4>Lonche de jamon</h4>
+                <p>$50</p>
+            </div> <div class="menu-item">
+                <h4>Burritas</h4>
+                <p>$20</p>
+            </div>
+            <div class="menu-item">
+                <h4>Alitas</h4>
+                <p>$140</p>
+            </div>
+            <div class="menu-item">
+                <h4>Palomitas de pollo</h4>
+                <p>$100</p>
+            </div>
+            <div class="menu-item">
+                <h4>Orden papas a la francesa</h4>
+                <p>$40</p>
+            </div>
+        </div>
+
+        <div class="menu-category">
+            <h3>Promociones </h3>
+            <div class="menu-item">
+                <h4>Combo duo</h4>
+                <p>Arroz cremoso con setas frescas.</p>
+            </div>
+            <div class="menu-item">
+                <h4>Combo burgue</h4>
+                <p>Corte de carne a la parrilla con guarnición.</p>
+            </div>
+            <div class="menu-item">
+                <h4>Combo familiar</h4>
+                <p>Arroz cremoso con setas frescas.</p>
+            </div>
+            <div class="menu-item">
+                <h4>Combo super</h4>
+                <p>Corte de carne a la parrilla con guarnición.</p>
+            </div>
+            <div class="menu-item">
+                <h4>Combo fista</h4>
+                <p>Corte de carne a la parrilla con guarnición.</p>
+            </div>
+           
+        </div>
+
+        <div class="menu-category">
+            <h3>Especiales </h3>
+            <div class="menu-item">
+                <h4>sushi de camaron</h4>
+                <p>Clásico postre italiano.</p>
+            </div>
+            <div class="menu-item">
+                <h4>Hambuguesa hawaiana</h4>
+                <p>Variedad de sabores a elección.</p>
+            </div>
+            <div class="menu-item">
+                <h4>Hambuguesa bbq</h4>
+                <p>Clásico postre italiano.</p>
+            </div>
+            <div class="menu-item">
+                <h4>Hambuguesa tocino</h4>
+                <p>Variedad de sabores a elección.</p>
+            </div> <div class="menu-item">
+                <h4>Sushi de salami</h4>
+                <p>Clásico postre italiano.</p>
+            </div>
+            <div class="menu-item">
+                <h4>Glotona </h4>
+                <p>Variedad de sabores a elección.</p>
+            </div>
+            <div class="menu-item">
+                <h4>Hot dog con tocino</h4>
+                <p>Clásico postre italiano.</p>
+            </div>
+            <div class="menu-item">
+                <h4>Papas jago</h4>
+                <p>Variedad de sabores a elección.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Reseñas -->
+    <section id="reviews">
+        <h2>Deja tu Reseña</h2>
+        <div class="review-form">
+            <input type="text" placeholder="Tu nombre">
+            <textarea placeholder="Escribe tu reseña"></textarea>
+            <button>Enviar Reseña</button>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        &copy; 2024 Restaurante Delicias Gourmet. Todos los derechos reservados al El gloton enmascarado.
+    </footer>
+
+</body>
+</html>
+
